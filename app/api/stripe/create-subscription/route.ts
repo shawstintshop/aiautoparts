@@ -9,8 +9,7 @@ export async function POST(request: NextRequest) {
 
     const Stripe = (await import('stripe')).default;
     const stripe = new Stripe(stripeKey, {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      apiVersion: '2024-06-20' as any,
+      apiVersion: '2026-02-25.clover',
     });
 
     const { email, paymentMethodId } = await request.json();
