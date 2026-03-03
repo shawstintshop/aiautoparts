@@ -1,3 +1,12 @@
+export interface HealthReport {
+  batteryVoltage?: number;
+  engineTemp?: number;
+  fuelLevel?: number;
+  oilLife?: number;
+  tirePressure?: Record<string, number>;
+  [key: string]: unknown;
+}
+
 export interface Vehicle {
   id?: string;
   year: number;
@@ -8,11 +17,11 @@ export interface Vehicle {
   drive: 'FWD' | 'RWD' | 'AWD' | '4WD';
   vin: string | null;
   mileage: number | null;
-  healthReport: object | null;
+  healthReport: HealthReport | null;
   activeDTCs: string[];
   identifiedVia: 'obd' | 'vin' | 'manual';
-  createdAt?: any;
-  lastScanned?: any;
+  createdAt?: Date | string | number;
+  lastScanned?: Date | string | number;
 }
 
 export interface CommonProblem {
@@ -93,7 +102,7 @@ export interface Mechanic {
   specialties: string[];
   priceRange: '$' | '$$' | '$$$';
   yearsInBusiness: number;
-  nextAvailableSlot: any;
+  nextAvailableSlot: Date | string;
   hasToolRental: boolean;
   toolInventory: string[];
   certifications: string[];
@@ -145,7 +154,7 @@ export interface UserProfile {
   vehicles: Vehicle[];
   activeVehicleId?: string;
   obdDeviceShipped: boolean;
-  createdAt: any;
+  createdAt: Date | string | number;
 }
 
 export interface CartItem {

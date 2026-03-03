@@ -41,7 +41,7 @@ export default function MechanicsPage() {
     '$$$': 'text-red-400',
   };
 
-  const formatSlot = (slot: string) => {
+  const formatSlot = (slot: Date | string) => {
     const date = new Date(slot);
     const now = new Date();
     const diffH = Math.round((date.getTime() - now.getTime()) / 1000 / 60 / 60);
