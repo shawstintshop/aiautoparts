@@ -1,0 +1,42 @@
+{
+  "name": "AutoGenius",
+  "short_name": "AutoGenius",
+  "description": "AI Auto Intelligence Platform — Find parts, diagnose problems, book mechanics",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#060608",
+  "theme_color": "#C45000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["auto", "utilities", "shopping"],
+  "shortcuts": [
+    {
+      "name": "Search Parts",
+      "url": "/parts",
+      "description": "Find auto parts for your vehicle"
+    },
+    {
+      "name": "Diagnose",
+      "url": "/diagnostic",
+      "description": "Diagnose OBD codes and symptoms"
+    },
+    {
+      "name": "Find Mechanic",
+      "url": "/mechanics",
+      "description": "Find mechanics near you"
+    }
+  ]
+}
